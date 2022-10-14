@@ -1,0 +1,45 @@
+<odoo>
+  <data>
+    <record id="search_custom_insoltecsa_ventas" model="ir.ui.view">
+        <field name="name">vista.search</field>
+        <field name="model">custom_insoltecsa.vista_ventas</field>
+        <field name="arch" type="xml">
+            <search>
+                    <field name="id_invoice"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- view -->
+    <record model="ir.ui.view" id="custom_insoltecsa.ventas_tree">
+      <field name="name">custom_insoltecsa.ventas.tree</field>
+      <field name="model">custom_insoltecsa.vista_ventas</field>
+      <field name="arch" type="xml">
+        <tree>
+            <field name="id_invoice"/>
+            <field name="pedido"/>
+            <field name="tipo"/>
+            <field name="factura"/>
+            <field name="fecha_factura"/>
+            <field name="referencia"/>
+            <field name="equipo_ventas"/>
+            <field name="pais"/>
+            <field name="codigo_cliente"/>
+            <field name="cliente"/>
+            <field name="nit"/>
+            <field name="sku"/>
+            <field name="ean"/>
+            <field name="nombre_sku"/>
+            <field name="categoria"/>
+            <field name="cantidad"/>
+            <field name="precio_unitario"/>
+            <field name="descuento_p"/>
+            <field name="total_linea"/>
+            <field name="sub_total"/>
+            <field name="usuario"/>
+        </tree>
+      </field>
+    </record>
+
+  </data>
+</odoo>
