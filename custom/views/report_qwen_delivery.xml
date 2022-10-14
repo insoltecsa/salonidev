@@ -1,0 +1,51 @@
+<openerp>
+    <data>
+        <template id="report_delivery_inherit_inso" inherit_id="stock.report_delivery_document">
+	    <xpath expr="//div[@t-if='o.signature']" position="before">
+                    <div class="col-auto mw-100 mb-2">
+                    <table width="100%" border="0" style="border: none !important; margin-top: 100px;">
+                        <tr>
+                            <th width="10%"></th>
+                            <th width="30%"><hr style="border: 1px solid black;"/></th>
+                            <th width="20"></th>
+                            <th width="30%"><hr style="border: 1px solid black;"/></th>
+                            <th width="10%"></th>
+                        </tr>
+                        <tr>
+                            <th width="10%"></th>
+                            <th width="30%" style="text-align: center;">Entrega</th>
+                            <th width="20"></th>
+                            <th width="30%" style="text-align: center;">Recibe</th>
+                            <th width="10%"></th>
+                        </tr>
+                        <tr>
+                            <th colspan="4">&#160;</th>
+                        </tr>
+                        <tr>
+                            <th width="10%"></th>
+                            <th width="30%" align="left">Nombre:</th>
+                            <th width="20"></th>
+                            <th width="30%" align="left">Nombre:</th>
+                            <th width="10%"></th>
+                        </tr>
+                        <tr>
+                            <th width="10%"></th>
+                            <th width="30%"></th>
+                            <th width="20"></th>
+                            <th width="30%" align="left">Fecha Hora:</th>
+                            <th width="10%"></th>
+                        </tr>
+                            <tr>
+                            <th width="10%"></th>
+                            <th width="30%"></th>
+                            <th width="20"></th>
+                            <th width="30%" align="left">DPI:</th>
+                            <th width="10%"></th>
+                        </tr>
+
+                        </table>
+                    </div>
+	    </xpath>
+        </template>
+    </data>
+</openerp>

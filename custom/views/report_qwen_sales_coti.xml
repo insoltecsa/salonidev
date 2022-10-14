@@ -1,0 +1,28 @@
+<openerp>
+    <data>
+      <template id="report_sales_inherit_coti" inherit_id="sale.report_saleorder_document">
+	    <xpath expr="//th[@name='th_description']" position="before">
+                 <th name="th_imagen" class="text-left">Imagen</th>
+	    </xpath>
+   	  <xpath expr="//td[@name='td_name']" position="before">
+                 <td name="td_imagen">
+                 <t t-if="line.product_template_id.image_128">
+                   <img t-att-src="image_data_uri(line.product_template_id.image_128)" style="max-height: 4cm; max-width: 8cm;"/>
+                 </t>  
+                 <t t-else="">
+                  &#160; 
+                 </t>
+                 </td>
+	    </xpath>
+      <xpath expr="//th[@name='th_subtotal']" position="after">
+                 <th name="th_total" class="text-right">Total</th>
+	    </xpath>
+      <xpath expr="//td[@name='td_subtotal']" position="after">
+                 <td name="td_subtotal" class="text-right o_price_total">
+                    <span t-field="line.price_total"/>
+                 </td>
+	    </xpath>
+      
+        </template>
+    </data>
+</openerp>
